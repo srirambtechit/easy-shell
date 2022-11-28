@@ -1,0 +1,78 @@
+{
+	"name": "easy-shell",
+	"displayName": "easy-shell",
+	"description": "easy exec shell cmd in vscode editor and get the output",
+	"version": "0.0.9",
+	"publisher": "inu1255",
+	"icon": "screenshot/icon.png",
+	"engines": {
+		"vscode": "^1.16.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:easyShell.run"
+	],
+	"main": "./extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "easy shell configuration",
+			"properties": {
+				"easyShell.cloneLine": {
+					"type": "boolean",
+					"default": true,
+					"description": "clone current line when output multiple lines"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "easyShell.run",
+				"title": "Easy Shell: run select command"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "easyShell.run",
+				"key": "alt+. alt+e",
+				"mac": "cmd+. cmd+e"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.5.2",
+		"vscode": "^1.1.5",
+		"mocha": "^3.5.0",
+		"eslint": "^4.6.1",
+		"@types/node": "^7.0.0",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"iconv-lite": "^0.6.2"
+	},
+	"directories": {
+		"test": "test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/inu1255/vscode-easy-shell.git"
+	},
+	"author": "inu1255",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/inu1255/vscode-easy-shell/issues"
+	},
+	"homepage": "https://github.com/inu1255/vscode-easy-shell#readme",
+	"__metadata": {
+		"id": "c0e2602f-9bad-4939-8c60-2e89cc9ab2e6",
+		"publisherId": "6d9d9c82-8990-4aa6-89c3-0d9a18dbee82",
+		"publisherDisplayName": "inu1255",
+		"installedTimestamp": 1619343356340
+	}
+}
